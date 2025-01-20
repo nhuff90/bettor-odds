@@ -1,0 +1,11 @@
+<mat-card *ngFor="let opportunity of arbitrageOpportunities">
+    <mat-card-header>
+        <mat-card-title>Arbitrage Opportunity</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Profit: {{ opportunity.profit | currency }}</p>
+        <p>Sportsbooks: {{ opportunity.sportsbooks.join(', ') }}</p>
+        <p>Timestamp: {{ opportunity.timestamp }}</p>
+        <button mat-button>View Details</button>
+    </mat-card-content>
+</mat-card>

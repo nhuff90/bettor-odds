@@ -1,0 +1,30 @@
+<div class="odds-container">
+    <h2>Real-Time Odds</h2>
+
+    <!-- Tabs for NFL, NBA, and CFB -->
+    <mat-tab-group>
+        <mat-tab label="NFL">
+            <div *ngIf="nflOddsData && nflOddsData.length > 0">
+                <div *ngFor="let event of nflOddsData">
+                    <app-event [event]="event"></app-event>
+                </div>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="NBA">
+            <div *ngIf="nbaOddsData && nbaOddsData.length > 0">
+                <div *ngFor="let event of nbaOddsData">
+                    <app-event [event]="event"></app-event>
+                </div>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="CFB">
+            <div *ngIf="cfbOddsData && cfbOddsData.length > 0">
+                <div *ngFor="let event of cfbOddsData">
+                    <app-event [event]="event"></app-event>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

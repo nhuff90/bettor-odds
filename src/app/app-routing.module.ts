@@ -6,6 +6,7 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { ProgramListComponent } from './program-list/program-list.component';
 import { RulesComponent } from './rules/rules.component';
 import { ArbitrageOpportunitiesComponent } from './arbitrage-opportunities/arbitrage-opportunities.component';
+import { OddsComponent } from './odds/odds.component';
 
 const appRoutes: Routes = [
   {
@@ -61,6 +62,10 @@ const appRoutes: Routes = [
     path: 'arbitrage',
     component: ArbitrageOpportunitiesComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'odds',  // URL path
+    component: OddsComponent  // Component to load
   },
   {
     path: '**',

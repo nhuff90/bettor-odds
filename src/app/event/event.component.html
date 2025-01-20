@@ -1,0 +1,30 @@
+<div class="event-card">
+    <div class="event-header">
+        <span class="event-time">{{ event.dateTime | date: 'short' }}</span> <!-- Date and Time -->
+    </div>
+
+    <!-- Teams and their odds displayed in two rows -->
+    <div class="event-details">
+        <div class="event-row">
+            <div class="team-info">
+                <span class="team">{{ event.homeTeam }}</span>
+            </div>
+            <div class="odds-info">
+                <span><strong>Moneyline:</strong> {{ event.moneyline?.home }}</span>
+                <span><strong>Spread:</strong> {{ event.spread?.home }}</span>
+                <span><strong>Over/Under:</strong> {{ event.overUnder?.home }}</span>
+            </div>
+        </div>
+
+        <div class="event-row">
+            <div class="team-info">
+                <span class="team">{{ event.awayTeam }}</span>
+            </div>
+            <div class="odds-info">
+                <span><strong>Moneyline:</strong> {{ event.moneyline?.away }}</span>
+                <span><strong>Spread:</strong> {{ event.spread?.away }}</span>
+                <span><strong>Over/Under:</strong> {{ event.overUnder?.away }}</span>
+            </div>
+        </div>
+    </div>
+</div>

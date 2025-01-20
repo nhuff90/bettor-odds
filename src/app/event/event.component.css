@@ -1,0 +1,62 @@
+.event-card {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.event-time {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.team-info {
+    flex: 1;
+    text-align: left;
+    /* Left-align team names */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.odds-info {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.odds-info span {
+    margin-right: 10px;
+}
+
+.team {
+    color: #42a5f5;
+    /* Adjust the team name color */
+}

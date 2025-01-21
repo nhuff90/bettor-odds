@@ -1,57 +1,81 @@
+// mock-odds.service.ts
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { OddsData } from './odds.interface'; // Import the OddsData interface
+import { OddsData } from './odds.interface'; // Adjust import to your interface location
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MockOddsService {
+  constructor() { }
 
-  getOdds() {
-    const mockData = {
+  getOddsData(): OddsData {
+    return {
       nflOdds: [
         {
           homeTeam: 'Boston Celtics',
           awayTeam: 'Golden State Warriors',
-          moneyline: { home: -375, away: +396 },
-          spread: { home: -9, away: +9.5 },
-          overUnder: { home: 223.5, away: 225 },
-          dateTime: '2025-01-20T17:00:00'
+          dateTime: '2025-01-20T17:00:00',
+          homeTeamOdds: {
+            moneyline: { odds: -375, sportsbook: 'Bookmaker A' },
+            spread: { odds: -9, sportsbook: 'Bookmaker B' },
+            overUnder: { odds: 223.5, sportsbook: 'Bookmaker C' }
+          },
+          awayTeamOdds: {
+            moneyline: { odds: +396, sportsbook: 'Bookmaker A' },
+            spread: { odds: +9.5, sportsbook: 'Bookmaker B' },
+            overUnder: { odds: 225, sportsbook: 'Bookmaker C' }
+          }
         },
         {
           homeTeam: 'Chicago Bulls',
           awayTeam: 'Los Angeles Clippers',
-          moneyline: { home: +217, away: -217 },
-          spread: { home: +6.5, away: -6 },
-          overUnder: { home: 226.5, away: 227.5 },
-          dateTime: '2025-01-20T22:30:00'
+          dateTime: '2025-01-20T22:30:00',
+          homeTeamOdds: {
+            moneyline: { odds: +217, sportsbook: 'Bookmaker A' },
+            spread: { odds: +6.5, sportsbook: 'Bookmaker B' },
+            overUnder: { odds: 226.5, sportsbook: 'Bookmaker C' }
+          },
+          awayTeamOdds: {
+            moneyline: { odds: -217, sportsbook: 'Bookmaker A' },
+            spread: { odds: -6, sportsbook: 'Bookmaker B' },
+            overUnder: { odds: 227.5, sportsbook: 'Bookmaker C' }
+          }
         }
       ],
       nbaOdds: [
         {
           homeTeam: 'Portland Trail Blazers',
           awayTeam: 'Miami Heat',
-          moneyline: { home: -150, away: +120 },
-          spread: { home: -5, away: +5 },
-          overUnder: { home: 220.5, away: 221.5 },
-          dateTime: '2025-01-21T19:30:00'
+          dateTime: '2025-01-21T19:30:00',
+          homeTeamOdds: {
+            moneyline: { odds: -150, sportsbook: 'Bookmaker A' },
+            spread: { odds: -5, sportsbook: 'Bookmaker B' },
+            overUnder: { odds: 220.5, sportsbook: 'Bookmaker C' }
+          },
+          awayTeamOdds: {
+            moneyline: { odds: +120, sportsbook: 'Bookmaker A' },
+            spread: { odds: +5, sportsbook: 'Bookmaker B' },
+            overUnder: { odds: 221.5, sportsbook: 'Bookmaker C' }
+          }
         }
       ],
       cfbOdds: [
         {
           homeTeam: 'New York Knicks',
           awayTeam: 'Brooklyn Nets',
-          moneyline: { home: -500, away: +375 },
-          spread: { home: -10.5, away: +10.5 },
-          overUnder: { home: 222.5, away: 223.5 },
-          dateTime: '2025-01-21T19:30:00'
+          dateTime: '2025-01-21T19:30:00',
+          homeTeamOdds: {
+            moneyline: { odds: -500, sportsbook: 'Bookmaker C' },
+            spread: { odds: -10.5, sportsbook: 'Bookmaker A' },
+            overUnder: { odds: 222.5, sportsbook: 'Bookmaker B' }
+          },
+          awayTeamOdds: {
+            moneyline: { odds: +375, sportsbook: 'Bookmaker C' },
+            spread: { odds: +10.5, sportsbook: 'Bookmaker A' },
+            overUnder: { odds: 223.5, sportsbook: 'Bookmaker B' }
+          }
         }
       ]
     };
-    return of(mockData);  // Return the mock data as an observable
-  }
-
-  refreshOdds() {
-    console.log('Refreshing odds...');
   }
 }

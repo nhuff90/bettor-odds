@@ -1,19 +1,22 @@
 // src/app/core/services/odds.interface.ts
 
+export interface Odds {
+    odds: number;
+    sportsbook: string;
+}
+
 export interface OddsEvent {
     homeTeam: string;
     awayTeam: string;
-    moneyline: {
-        home: number;
-        away: number;
+    homeTeamOdds: {
+        moneyline: Odds;
+        spread: Odds;
+        overUnder: Odds;
     };
-    spread: {
-        home: number;
-        away: number;
-    };
-    overUnder: {
-        home: number;
-        away: number;
+    awayTeamOdds: {
+        moneyline: Odds;
+        spread: Odds;
+        overUnder: Odds;
     };
     dateTime: string;  // Date and time of the event
 }

@@ -83,3 +83,20 @@ button {
     color: #1976d2;
     /* Hover color */
 }
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Create 2 equal-width columns */
+    gap: 16px;
+    /* Add spacing between rows and columns */
+    margin: 16px 0;
+}
+
+.event-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

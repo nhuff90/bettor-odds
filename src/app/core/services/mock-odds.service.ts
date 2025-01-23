@@ -1,4 +1,3 @@
-// mock-odds.service.ts
 import { Injectable } from '@angular/core';
 import { OddsData } from './odds.interface'; // Adjust import to your interface location
 
@@ -57,22 +56,97 @@ export class MockOddsService {
             spread: { odds: +5, sportsbook: 'Bookmaker B' },
             overUnder: { odds: 221.5, sportsbook: 'Bookmaker C' }
           }
+        },
+        {
+          homeTeam: 'Dallas Mavericks',
+          awayTeam: 'San Antonio Spurs',
+          dateTime: '2025-01-22T21:00:00',
+          homeTeamOdds: {
+            moneyline: { odds: -200, sportsbook: 'Bookmaker B' },
+            spread: { odds: -6.5, sportsbook: 'Bookmaker A' },
+            overUnder: { odds: 218.5, sportsbook: 'Bookmaker C' }
+          },
+          awayTeamOdds: {
+            moneyline: { odds: +180, sportsbook: 'Bookmaker B' },
+            spread: { odds: +6.5, sportsbook: 'Bookmaker A' },
+            overUnder: { odds: 219.0, sportsbook: 'Bookmaker C' }
+          }
+        },
+        {
+          homeTeam: 'Houston Rockets',
+          awayTeam: 'Utah Jazz',
+          dateTime: '2025-01-22T22:00:00',
+          homeTeamOdds: {
+            moneyline: { odds: -180, sportsbook: 'Bookmaker A' },
+            spread: { odds: -4.5, sportsbook: 'Bookmaker C' },
+            overUnder: { odds: 212.0, sportsbook: 'Bookmaker B' }
+          },
+          awayTeamOdds: {
+            moneyline: { odds: +160, sportsbook: 'Bookmaker A' },
+            spread: { odds: +4.5, sportsbook: 'Bookmaker C' },
+            overUnder: { odds: 213.5, sportsbook: 'Bookmaker B' }
+          }
+        },
+        {
+          homeTeam: 'Los Angeles Lakers',
+          awayTeam: 'Memphis Grizzlies',
+          dateTime: '2025-01-23T00:30:00',
+          homeTeamOdds: {
+            moneyline: { odds: -110, sportsbook: 'Bookmaker B' },
+            spread: { odds: -1.5, sportsbook: 'Bookmaker A' },
+            overUnder: { odds: 215.0, sportsbook: 'Bookmaker C' }
+          },
+          awayTeamOdds: {
+            moneyline: { odds: -105, sportsbook: 'Bookmaker B' },
+            spread: { odds: +1.5, sportsbook: 'Bookmaker A' },
+            overUnder: { odds: 216.5, sportsbook: 'Bookmaker C' }
+          }
+        },
+        {
+          homeTeam: 'Phoenix Suns',
+          awayTeam: 'Denver Nuggets',
+          dateTime: '2025-01-23T02:00:00',
+          homeTeamOdds: {
+            moneyline: { odds: -220, sportsbook: 'Bookmaker C' },
+            spread: { odds: -6, sportsbook: 'Bookmaker B' },
+            overUnder: { odds: 228.0, sportsbook: 'Bookmaker A' }
+          },
+          awayTeamOdds: {
+            moneyline: { odds: +190, sportsbook: 'Bookmaker C' },
+            spread: { odds: +6, sportsbook: 'Bookmaker B' },
+            overUnder: { odds: 229.5, sportsbook: 'Bookmaker A' }
+          }
         }
       ],
       cfbOdds: [
         {
-          homeTeam: 'New York Knicks',
-          awayTeam: 'Brooklyn Nets',
-          dateTime: '2025-01-21T19:30:00',
+          homeTeam: 'Ohio State Buckeyes',
+          awayTeam: 'Michigan Wolverines',
+          dateTime: '2025-01-23T15:00:00',
           homeTeamOdds: {
-            moneyline: { odds: -500, sportsbook: 'Bookmaker C' },
-            spread: { odds: -10.5, sportsbook: 'Bookmaker A' },
-            overUnder: { odds: 222.5, sportsbook: 'Bookmaker B' }
+            moneyline: { odds: -140, sportsbook: 'Bookmaker A' },
+            spread: { odds: -3.5, sportsbook: 'Bookmaker C' },
+            overUnder: { odds: 210.0, sportsbook: 'Bookmaker B' }
           },
           awayTeamOdds: {
-            moneyline: { odds: +375, sportsbook: 'Bookmaker C' },
-            spread: { odds: +10.5, sportsbook: 'Bookmaker A' },
-            overUnder: { odds: 223.5, sportsbook: 'Bookmaker B' }
+            moneyline: { odds: +120, sportsbook: 'Bookmaker A' },
+            spread: { odds: +3.5, sportsbook: 'Bookmaker C' },
+            overUnder: { odds: 211.5, sportsbook: 'Bookmaker B' }
+          }
+        },
+        {
+          homeTeam: 'Alabama Crimson Tide',
+          awayTeam: 'LSU Tigers',
+          dateTime: '2025-01-23T20:30:00',
+          homeTeamOdds: {
+            moneyline: { odds: -160, sportsbook: 'Bookmaker B' },
+            spread: { odds: -4.5, sportsbook: 'Bookmaker C' },
+            overUnder: { odds: 220.5, sportsbook: 'Bookmaker A' }
+          },
+          awayTeamOdds: {
+            moneyline: { odds: +140, sportsbook: 'Bookmaker B' },
+            spread: { odds: +4.5, sportsbook: 'Bookmaker C' },
+            overUnder: { odds: 222.0, sportsbook: 'Bookmaker A' }
           }
         }
       ]

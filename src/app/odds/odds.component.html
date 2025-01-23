@@ -1,29 +1,22 @@
 <div class="odds-container">
     <h2>Real-Time Odds</h2>
 
-    <!-- Tabs for NFL, NBA, and CFB -->
     <mat-tab-group>
         <mat-tab label="NFL">
-            <div *ngIf="oddsData?.nflOdds && oddsData.nflOdds.length > 0">
-                <div *ngFor="let event of oddsData.nflOdds">
-                    <app-event [event]="event"></app-event>
-                </div>
+            <div *ngIf="oddsData?.nflOdds && oddsData.nflOdds.length > 0" class="events-grid">
+                <app-event *ngFor="let event of oddsData.nflOdds" [event]="event"></app-event>
             </div>
         </mat-tab>
 
         <mat-tab label="NBA">
-            <div *ngIf="oddsData?.nbaOdds && oddsData.nbaOdds.length > 0">
-                <div *ngFor="let event of oddsData.nbaOdds">
-                    <app-event [event]="event"></app-event>
-                </div>
+            <div *ngIf="oddsData?.nbaOdds && oddsData.nbaOdds.length > 0" class="events-grid">
+                <app-event *ngFor="let event of oddsData.nbaOdds" [event]="event"></app-event>
             </div>
         </mat-tab>
 
         <mat-tab label="CFB">
-            <div *ngIf="oddsData?.cfbOdds && oddsData.cfbOdds.length > 0">
-                <div *ngFor="let event of oddsData.cfbOdds">
-                    <app-event [event]="event"></app-event>
-                </div>
+            <div *ngIf="oddsData?.cfbOdds && oddsData.cfbOdds.length > 0" class="events-grid">
+                <app-event *ngFor="let event of oddsData.cfbOdds" [event]="event"></app-event>
             </div>
         </mat-tab>
     </mat-tab-group>

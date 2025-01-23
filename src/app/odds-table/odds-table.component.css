@@ -1,0 +1,68 @@
+.market {
+    margin-bottom: 30px;
+}
+
+.market-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.market-header h2 {
+    margin: 0;
+}
+
+.view-alternate {
+    font-size: 14px;
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.odds-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #e0e0e0;
+}
+
+.odds-table th,
+.odds-table td {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.odds-table th {
+    background-color: #1f1f1f;
+}
+
+.odds-table td.best-odds {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.odds-table td.avg-odds {
+    background-color: #1e88e5;
+    color: white;
+}
+
+/* Shared column styling for alignment */
+.team-column {
+    width: 500px;
+    /* Fixed width for the first column */
+    text-align: left;
+    /* Align team names to the left */
+    padding: 10px;
+}
+
+.odds-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.odds-table th,
+.odds-table td {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 10px;
+}

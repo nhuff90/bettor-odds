@@ -1,22 +1,15 @@
-<div *ngIf="event">
-    <h1>{{ event.homeTeam }} vs. {{ event.awayTeam }}</h1>
-    <p>Date: {{ event.dateTime | date: 'fullDate' }}</p>
-    <p>Time: {{ event.dateTime | date: 'shortTime' }}</p>
+<div class="event-page">
+    <!-- Event Header -->
+    <app-event-header [eventTitle]="'Washington Commanders vs Philadelphia Eagles'"
+        [eventDate]="'Sun, Jan 26 at 3:00 PM'" [league]="'NFL Football'"></app-event-header>
 
-    <div>
-        <h3>Home Team Odds:</h3>
-        <p>Moneyline: {{ event.homeTeamOdds.moneyline.odds }} ({{ event.homeTeamOdds.moneyline.sportsbook }})</p>
-        <p>Spread: {{ event.homeTeamOdds.spread.odds }} ({{ event.homeTeamOdds.spread.sportsbook }})</p>
-        <p>Over/Under: {{ event.homeTeamOdds.overUnder.odds }} ({{ event.homeTeamOdds.overUnder.sportsbook }})</p>
-    </div>
+    <!-- Filters -->
+    <app-filters [filters]="filters" (filterSelected)="onFilterSelected($event)"></app-filters>
 
-    <div>
-        <h3>Away Team Odds:</h3>
-        <p>Moneyline: {{ event.awayTeamOdds.moneyline.odds }} ({{ event.awayTeamOdds.moneyline.sportsbook }})</p>
-        <p>Spread: {{ event.awayTeamOdds.spread.odds }} ({{ event.awayTeamOdds.spread.sportsbook }})</p>
-        <p>Over/Under: {{ event.awayTeamOdds.overUnder.odds }} ({{ event.awayTeamOdds.overUnder.sportsbook }})</p>
+    <!-- Odds Section -->
+    <div class="odds-section">
+        <div *ngFor="let market of oddsMarkets" class="market">
+            <app-odds-table [market]="market" [sportsbooks]="sportsbooks"></app-odds-table>
+        </div>
     </div>
-</div>
-<div *ngIf="!event">
-    <p>Event not found.</p>
 </div>

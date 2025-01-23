@@ -1,0 +1,13 @@
+.event-header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+  }
+  
+  .event-meta span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #bbb;
+  }
+  

@@ -1,0 +1,21 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .filters button {
+    background-color: #1f1f1f;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .filters button:hover {
+    background-color: #333;
+  }
+  

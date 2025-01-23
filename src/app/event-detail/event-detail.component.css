@@ -1,0 +1,97 @@
+.event-page {
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.event-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.event-meta span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filters button {
+    background-color: #1f1f1f;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filters button:hover {
+    background-color: #333;
+}
+
+.odds-section {
+    margin-top: 30px;
+}
+
+.market {
+    margin-bottom: 30px;
+}
+
+.market-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.market-header h2 {
+    margin: 0;
+}
+
+.view-alternate {
+    font-size: 14px;
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.odds-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.odds-table th,
+.odds-table td {
+    border: 1px solid #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.odds-table th {
+    background-color: #1f1f1f;
+}
+
+.odds-table td.best-odds {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.odds-table td.avg-odds {
+    background-color: #1e88e5;
+    color: white;
+}
+
+.toggles {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 20px;
+}

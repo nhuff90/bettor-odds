@@ -27,7 +27,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';  // Added for the 
 import { FormsModule } from '@angular/forms';
 import { OddsComponent } from './odds/odds.component';
 import { EventComponent } from './event/event.component';
-import { EventDetailComponent } from './event-detail/event-detail.component'; // For ngModel
+import { EventDetailComponent } from './event-detail/event-detail.component';
+import { EventHeaderComponent } from './event-header/event-header.component';
+import { FiltersComponent } from './filters/filters.component';
+import { OddsTableComponent } from './odds-table/odds-table.component'; // For ngModel
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { EventDetailComponent } from './event-detail/event-detail.component'; //
     ArbitrageOpportunitiesComponent,
     OddsComponent,
     EventComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    EventHeaderComponent,
+    FiltersComponent,
+    OddsTableComponent
   ],
   imports: [
     BrowserModule,

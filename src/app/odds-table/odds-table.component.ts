@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./odds-table.component.css'],
 })
 export class OddsTableComponent {
-  @Input() market!: { title: string; teams: any[] };
+  @Input() market!: { id: string; title: string; teams: any[] }; // Add `id` here
   @Input() sportsbooks!: { name: string; logo: string }[];
 }

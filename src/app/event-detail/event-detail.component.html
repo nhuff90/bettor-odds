@@ -1,10 +1,9 @@
 <div class="event-page">
-    <!-- Event Header -->
     <app-event-header [eventTitle]="'Washington Commanders vs Philadelphia Eagles'"
         [eventDate]="'Sun, Jan 26 at 3:00 PM'" [league]="'NFL Football'"></app-event-header>
 
     <!-- Filters -->
-    <app-filters [filters]="filters" (filterSelected)="onFilterSelected($event)"></app-filters>
+    <app-filters [filters]="filters" (filterSelected)="scrollToTable($event)"></app-filters>
 
     <!-- Odds Section -->
     <div class="odds-section">

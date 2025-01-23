@@ -1,13 +1,13 @@
-<div class="market">
+<div class="market" [id]="market.id">
     <div class="market-header">
         <h2>{{ market.title }}</h2>
-        <a href="#" class="view-alternate">View Alternate Lines →</a>
+        <!-- <a href="#" class="view-alternate">View Alternate Lines →</a> -->
     </div>
 
     <table class="odds-table">
         <thead>
             <tr>
-                <th class="team-column"></th> <!-- Add shared class -->
+                <th class="team-column"></th>
                 <th>Best Odds</th>
                 <th>Avg Odds</th>
                 <th *ngFor="let sportsbook of sportsbooks">
@@ -17,7 +17,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let team of market.teams">
-                <td class="team-column">{{ team.name }}</td> <!-- Add shared class -->
+                <td class="team-column">{{ team.name }}</td>
                 <td class="best-odds">{{ team.bestOdds }}</td>
                 <td class="avg-odds">{{ team.avgOdds }}</td>
                 <td *ngFor="let odd of team.odds">{{ odd }}</td>

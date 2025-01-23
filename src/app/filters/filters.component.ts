@@ -10,6 +10,14 @@ export class FiltersComponent {
   @Output() filterSelected = new EventEmitter<string>();
 
   selectFilter(filter: string) {
-    this.filterSelected.emit(filter);
+    // Map filter names to table IDs
+    const filterToTableIdMap: { [key: string]: string } = {
+      'Main Markets': 'moneyline',
+      'Moneyline': 'moneyline',
+      'Point Spread': 'point-spread',
+      'Over/Under': 'over-under',
+    };
+    const tableId = filterToTableIdMap[filter] || 'moneyline'; // Default to 'moneyline'
+    this.filterSelected.emit(tableId);
   }
 }

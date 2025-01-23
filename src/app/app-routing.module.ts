@@ -7,6 +7,9 @@ import { ProgramListComponent } from './program-list/program-list.component';
 import { RulesComponent } from './rules/rules.component';
 import { ArbitrageOpportunitiesComponent } from './arbitrage-opportunities/arbitrage-opportunities.component';
 import { OddsComponent } from './odds/odds.component';
+import { EventDetailComponent } from './event-detail/event-detail.component';
+
+
 
 const appRoutes: Routes = [
   {
@@ -66,6 +69,10 @@ const appRoutes: Routes = [
   {
     path: 'odds',  // URL path
     component: OddsComponent  // Component to load
+  },
+  {
+    path: 'event/:id',
+    component: EventDetailComponent
   },
   {
     path: '**',

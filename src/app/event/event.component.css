@@ -60,3 +60,21 @@
     color: #42a5f5;
     /* Adjust the team name color */
 }
+
+/* Style for individual event cards */
+.event-card {
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    /* Changes cursor to pointer to indicate it's clickable */
+}
+
+/* Hover effect */
+.event-card:hover {
+    background-color: #3a3f4b;
+    /* Slightly lighter background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Slightly stronger shadow */
+}

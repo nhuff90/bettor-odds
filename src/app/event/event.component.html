@@ -1,6 +1,6 @@
-<div class="event-card">
+<div class="event-card" [routerLink]="['/event', event.id]">
     <div class="event-header">
-        <span class="event-time">{{ event.dateTime | date: 'short' }}</span> <!-- Date and Time -->
+        <span class="event-time">{{ event.dateTime | date: 'short' }}</span>
     </div>
 
     <div class="event-details">
@@ -9,12 +9,9 @@
                 <span class="team">{{ event.homeTeam }}</span>
             </div>
             <div class="odds-info">
-                <span><strong>Moneyline:</strong> {{ event.homeTeamOdds.moneyline.odds }} ({{
-                    event.homeTeamOdds.moneyline.sportsbook }})</span>
-                <span><strong>Spread:</strong> {{ event.homeTeamOdds.spread.odds }} ({{
-                    event.homeTeamOdds.spread.sportsbook }})</span>
-                <span><strong>Over/Under:</strong> {{ event.homeTeamOdds.overUnder.odds }} ({{
-                    event.homeTeamOdds.overUnder.sportsbook }})</span>
+                <span><strong>Moneyline:</strong> {{ event.homeTeamOdds.moneyline.odds }}</span>
+                <span><strong>Spread:</strong> {{ event.homeTeamOdds.spread.odds }}</span>
+                <span><strong>Over/Under:</strong> {{ event.homeTeamOdds.overUnder.odds }}</span>
             </div>
         </div>
 
@@ -23,12 +20,9 @@
                 <span class="team">{{ event.awayTeam }}</span>
             </div>
             <div class="odds-info">
-                <span><strong>Moneyline:</strong> {{ event.awayTeamOdds.moneyline.odds }} ({{
-                    event.awayTeamOdds.moneyline.sportsbook }})</span>
-                <span><strong>Spread:</strong> {{ event.awayTeamOdds.spread.odds }} ({{
-                    event.awayTeamOdds.spread.sportsbook }})</span>
-                <span><strong>Over/Under:</strong> {{ event.awayTeamOdds.overUnder.odds }} ({{
-                    event.awayTeamOdds.overUnder.sportsbook }})</span>
+                <span><strong>Moneyline:</strong> {{ event.awayTeamOdds.moneyline.odds }}</span>
+                <span><strong>Spread:</strong> {{ event.awayTeamOdds.spread.odds }}</span>
+                <span><strong>Over/Under:</strong> {{ event.awayTeamOdds.overUnder.odds }}</span>
             </div>
         </div>
     </div>

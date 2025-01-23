@@ -26,7 +26,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';  // Added for the 
 import { MatSidenavModule } from '@angular/material/sidenav';  // Added for the sidebar
 import { FormsModule } from '@angular/forms';
 import { OddsComponent } from './odds/odds.component';
-import { EventComponent } from './event/event.component'; // For ngModel
+import { EventComponent } from './event/event.component';
+import { EventDetailComponent } from './event-detail/event-detail.component'; // For ngModel
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EventComponent } from './event/event.component'; // For ngModel
     RulesComponent,
     ArbitrageOpportunitiesComponent,
     OddsComponent,
-    EventComponent
+    EventComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -6,19 +6,20 @@ export interface Odds {
 }
 
 export interface OddsEvent {
+    id: string; // Add this field
     homeTeam: string;
     awayTeam: string;
+    dateTime: string;
     homeTeamOdds: {
-        moneyline: Odds;
-        spread: Odds;
-        overUnder: Odds;
+        moneyline: { odds: number; sportsbook: string };
+        spread: { odds: number; sportsbook: string };
+        overUnder: { odds: number; sportsbook: string };
     };
     awayTeamOdds: {
-        moneyline: Odds;
-        spread: Odds;
-        overUnder: Odds;
+        moneyline: { odds: number; sportsbook: string };
+        spread: { odds: number; sportsbook: string };
+        overUnder: { odds: number; sportsbook: string };
     };
-    dateTime: string;  // Date and time of the event
 }
 
 export interface OddsData {

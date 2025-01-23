@@ -1,0 +1,22 @@
+<div *ngIf="event">
+    <h1>{{ event.homeTeam }} vs. {{ event.awayTeam }}</h1>
+    <p>Date: {{ event.dateTime | date: 'fullDate' }}</p>
+    <p>Time: {{ event.dateTime | date: 'shortTime' }}</p>
+
+    <div>
+        <h3>Home Team Odds:</h3>
+        <p>Moneyline: {{ event.homeTeamOdds.moneyline.odds }} ({{ event.homeTeamOdds.moneyline.sportsbook }})</p>
+        <p>Spread: {{ event.homeTeamOdds.spread.odds }} ({{ event.homeTeamOdds.spread.sportsbook }})</p>
+        <p>Over/Under: {{ event.homeTeamOdds.overUnder.odds }} ({{ event.homeTeamOdds.overUnder.sportsbook }})</p>
+    </div>
+
+    <div>
+        <h3>Away Team Odds:</h3>
+        <p>Moneyline: {{ event.awayTeamOdds.moneyline.odds }} ({{ event.awayTeamOdds.moneyline.sportsbook }})</p>
+        <p>Spread: {{ event.awayTeamOdds.spread.odds }} ({{ event.awayTeamOdds.spread.sportsbook }})</p>
+        <p>Over/Under: {{ event.awayTeamOdds.overUnder.odds }} ({{ event.awayTeamOdds.overUnder.sportsbook }})</p>
+    </div>
+</div>
+<div *ngIf="!event">
+    <p>Event not found.</p>
+</div>

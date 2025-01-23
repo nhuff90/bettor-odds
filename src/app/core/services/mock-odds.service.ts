@@ -11,6 +11,7 @@ export class MockOddsService {
     return {
       nflOdds: [
         {
+          id: 'nfl1',
           homeTeam: 'Boston Celtics',
           awayTeam: 'Golden State Warriors',
           dateTime: '2025-01-20T17:00:00',
@@ -26,6 +27,7 @@ export class MockOddsService {
           }
         },
         {
+          id: 'nfl2',
           homeTeam: 'Chicago Bulls',
           awayTeam: 'Los Angeles Clippers',
           dateTime: '2025-01-20T22:30:00',
@@ -43,6 +45,7 @@ export class MockOddsService {
       ],
       nbaOdds: [
         {
+          id: 'nba1',
           homeTeam: 'Portland Trail Blazers',
           awayTeam: 'Miami Heat',
           dateTime: '2025-01-21T19:30:00',
@@ -58,6 +61,7 @@ export class MockOddsService {
           }
         },
         {
+          id: 'nba2',
           homeTeam: 'Dallas Mavericks',
           awayTeam: 'San Antonio Spurs',
           dateTime: '2025-01-22T21:00:00',
@@ -73,6 +77,7 @@ export class MockOddsService {
           }
         },
         {
+          id: 'nba3',
           homeTeam: 'Houston Rockets',
           awayTeam: 'Utah Jazz',
           dateTime: '2025-01-22T22:00:00',
@@ -88,6 +93,7 @@ export class MockOddsService {
           }
         },
         {
+          id: 'nba4',
           homeTeam: 'Los Angeles Lakers',
           awayTeam: 'Memphis Grizzlies',
           dateTime: '2025-01-23T00:30:00',
@@ -103,6 +109,7 @@ export class MockOddsService {
           }
         },
         {
+          id: 'nba5',
           homeTeam: 'Phoenix Suns',
           awayTeam: 'Denver Nuggets',
           dateTime: '2025-01-23T02:00:00',
@@ -120,6 +127,7 @@ export class MockOddsService {
       ],
       cfbOdds: [
         {
+          id: 'cfb1',
           homeTeam: 'Ohio State Buckeyes',
           awayTeam: 'Michigan Wolverines',
           dateTime: '2025-01-23T15:00:00',
@@ -135,6 +143,7 @@ export class MockOddsService {
           }
         },
         {
+          id: 'cfb2',
           homeTeam: 'Alabama Crimson Tide',
           awayTeam: 'LSU Tigers',
           dateTime: '2025-01-23T20:30:00',

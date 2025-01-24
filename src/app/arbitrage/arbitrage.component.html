@@ -1,0 +1,51 @@
+<div class="arbitrage-container">
+    <h2>Arbitrage Bets</h2>
+
+    <!-- Filters -->
+    <div class="filter-container">
+        <button mat-button class="filter-button">Pre-Match</button>
+        <button mat-button class="filter-button">Live</button>
+        <input matInput placeholder="Search" class="search-bar" />
+    </div>
+
+    <!-- Table -->
+    <div class="arbitrage-table">
+        <!-- Table Header -->
+        <div class="table-header">
+            <span>Arb %</span>
+            <span>Event</span>
+            <span>Market</span>
+            <span>Books</span>
+            <span>1-Click Bet</span>
+            <span>Profit</span>
+        </div>
+
+        <!-- Table Rows -->
+        <div *ngFor="let bet of arbitrageBets; let i = index" class="table-row">
+            <span>{{ bet.arbPercentage }}%</span>
+            <span>{{ bet.event }}</span>
+            <span>{{ bet.market }}</span>
+
+            <!-- Books Column -->
+            <div class="books-container">
+                <div *ngFor="let book of bet.books" class="book-detail">
+                    <span>{{ book.name }}: {{ book.odds }}</span>
+                </div>
+            </div>
+
+            <!-- 1-Click Bet Column -->
+            <div class="bet-controls-container">
+                <div *ngFor="let book of bet.books; let j = index" class="bet-controls">
+                    <input matInput type="number" min="0" step="1" placeholder="Enter $" [(ngModel)]="book.betSize"
+                        (input)="calculateProfits(bet, j)" />
+                    <button mat-button class="bet-button">{{ book.buttonLabel }}</button>
+                </div>
+            </div>
+
+            <!-- Profit Column -->
+            <div class="profit-container">
+                <span>{{ bet.profitTeam1 }}</span> / <span>{{ bet.profitTeam2 }}</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,9 +5,9 @@ import { AuthGuard } from './core/guards/auth.guard';
 
 import { ProgramListComponent } from './program-list/program-list.component';
 import { RulesComponent } from './rules/rules.component';
-import { ArbitrageOpportunitiesComponent } from './arbitrage-opportunities/arbitrage-opportunities.component';
 import { OddsComponent } from './odds/odds.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
+import { ArbitrageComponent } from './arbitrage/arbitrage.component';
 
 
 
@@ -63,7 +63,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'arbitrage',
-    component: ArbitrageOpportunitiesComponent,
+    component: ArbitrageComponent,
     canActivate: [AuthGuard]
   },
   {

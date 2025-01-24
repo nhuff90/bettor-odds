@@ -11,7 +11,6 @@ import { LoggerModule } from 'ngx-logger';
 import { environment } from '../environments/environment';
 import { ProgramListComponent } from './program-list/program-list.component';
 import { RulesComponent } from './rules/rules.component';
-import { ArbitrageOpportunitiesComponent } from './arbitrage-opportunities/arbitrage-opportunities.component';
 import { LayoutComponent } from './shared/layout/layout.component';  // Import the LayoutComponent
 
 
@@ -30,7 +29,8 @@ import { EventComponent } from './event/event.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventHeaderComponent } from './event-header/event-header.component';
 import { FiltersComponent } from './filters/filters.component';
-import { OddsTableComponent } from './odds-table/odds-table.component'; // For ngModel
+import { OddsTableComponent } from './odds-table/odds-table.component';
+import { ArbitrageComponent } from './arbitrage/arbitrage.component'; // For ngModel
 
 @NgModule({
   declarations: [
@@ -38,13 +38,13 @@ import { OddsTableComponent } from './odds-table/odds-table.component'; // For n
     LayoutComponent,
     ProgramListComponent,
     RulesComponent,
-    ArbitrageOpportunitiesComponent,
     OddsComponent,
     EventComponent,
     EventDetailComponent,
     EventHeaderComponent,
     FiltersComponent,
-    OddsTableComponent
+    OddsTableComponent,
+    ArbitrageComponent
   ],
   imports: [
     BrowserModule,

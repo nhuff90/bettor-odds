@@ -1,33 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ArbitrageBet } from './arbitrage-bet.model';
+import { ArbitrageService } from '../core/services/arbitrage.service';
 
 @Component({
   selector: 'app-arbitrage',
   templateUrl: './arbitrage.component.html',
   styleUrls: ['./arbitrage.component.css'],
 })
+export class ArbitrageComponent implements OnInit {
+  arbitrageBets: ArbitrageBet[] = [];
 
-export class ArbitrageComponent {
-  arbitrageBets: ArbitrageBet[] = [
-    {
-      arbPercentage: 1.23,
-      event: "Team A vs Team B",
-      market: "Moneyline",
-      books: [
-        { name: "Fanduel", odds: "+150", betSize: null, buttonLabel: "Bet" },
-        { name: "DraftKings", odds: "-120", betSize: null, buttonLabel: "Bet" }
-      ]
-    },
-    {
-      arbPercentage: 2.05,
-      event: "Team C vs Team D",
-      market: "Over/Under",
-      books: [
-        { name: "Bet365", odds: "-110", betSize: null, buttonLabel: "Bet" },
-        { name: "Caesars", odds: "+120", betSize: null, buttonLabel: "Bet" }
-      ]
-    }
-  ];
+  constructor(private arbitrageService: ArbitrageService) { }
+
+  ngOnInit(): void {
+    this.arbitrageBets = this.arbitrageService.getMockArbitrageBets();
+  }
 
   calculateProfits(bet: ArbitrageBet, changedIndex: number): void {
     if (bet.books.length < 2) return;
@@ -60,5 +47,4 @@ export class ArbitrageComponent {
     bet.profitTeam1 = `$${(betSize1 * odds1 - betSize2).toFixed(2)}`;
     bet.profitTeam2 = `$${(betSize2 * odds2 - betSize1).toFixed(2)}`;
   }
-
 }

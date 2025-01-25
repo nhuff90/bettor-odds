@@ -1,0 +1,181 @@
+/* General Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #4caf50, #1976d2);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Learn More Section */
+.learn-more {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.learn-more h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #bb86fc;
+}
+
+.learn-more p {
+    margin-bottom: 20px;
+}
+
+.learn-more ul {
+    margin: 0 auto 20px;
+    padding: 0;
+    list-style: none;
+    max-width: 600px;
+    text-align: left;
+}
+
+.learn-more ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.learn-more ul li:before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+}
+
+.learn-more .cta-section {
+    margin-top: 20px;
+}
+
+.learn-more .cta-primary {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.learn-more .cta-primary:hover {
+    background-color: #43a047;
+}
+
+/* Get Started Section */
+/* Get Started Section */
+.get-started {
+    background-color: #1e1e1e;
+    /* Dark background */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.get-started h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #bb86fc;
+    /* Highlight color */
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    /* Stacked for smaller screens */
+    gap: 20px;
+}
+
+.step {
+    background-color: #333;
+    /* Card background */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    /* Align text inside each step */
+    color: #e0e0e0;
+    /* Light text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow */
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4caf50;
+    /* Green heading */
+}
+
+.step p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.step button.cta-primary {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.step button.cta-primary:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+    /* Lift effect */
+}
+
+.step button.cta-primary:active {
+    transform: translateY(1px);
+    /* Pressed effect */
+}
+
+/* Footer */
+.footer {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #bb86fc;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

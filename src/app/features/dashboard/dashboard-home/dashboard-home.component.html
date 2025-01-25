@@ -1,18 +1,105 @@
-<div class="container" fxLayout="row" fxLayoutAlign="center none">
+<!DOCTYPE html>
+<html lang="en">
 
-  <div fxFlex="95%">
-    <div class="container" fxLayout="row" fxLayoutAlign="center none">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BettorOdds - Maximize Your Betting Profits</title>
+</head>
 
-      <h2>Welcome back, {{currentUser.fullName}}!</h2>
-
-    </div>
-
-    <div class="container" fxLayout="row" fxLayoutAlign="center none">
-      <div fxFlex="50%" class="text-center no-records animate">
-        <mat-icon>dashboard</mat-icon>
-        <p>This is the dashboard.</p>
+<body>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Maximize Your Betting Profits</h1>
+      <p>Find real-time arbitrage and positive EV opportunities across all major sportsbooks.</p>
+      <div class="cta-buttons">
+        <button class="cta-primary" routerLink="/get-started">Start Free Trial</button>
       </div>
-      <mat-icon> </mat-icon>
+    </div>
+  </header>
+
+  <!-- Live Feed Section -->
+  <section class="live-feed">
+    <h2>Real-Time Arbitrage Opportunities</h2>
+    <table class="arbitrage-table">
+      <thead>
+        <tr>
+          <th>Event</th>
+          <th>Market</th>
+          <th>Arb %</th>
+          <th>Books</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Manchester United vs Arsenal</td>
+          <td>Moneyline</td>
+          <td>1.23%</td>
+          <td>Fanduel, DraftKings</td>
+        </tr>
+        <tr>
+          <td>New York Yankees vs Boston Red Sox</td>
+          <td>Over/Under</td>
+          <td>2.05%</td>
+          <td>Bet365, Caesars</td>
+        </tr>
+        <!-- Add more sample data as needed -->
+      </tbody>
+    </table>
+    <div class="cta-banner">
+      <p>Sign up now to unlock full access to live odds tracking and profit opportunities.</p>
+      <button class="cta-primary" routerLink="/get-started">Get Started</button>
+    </div>
+  </section>
+
+  <div class="section how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Step 1: Connect Your Sportsbooks</h3>
+        <p>Sync accounts from FanDuel, DraftKings, BetMGM, and more.</p>
+      </div>
+      <div class="step">
+        <h3>Step 2: Analyze Opportunities</h3>
+        <p>View live odds and profit-making opportunities in real-time.</p>
+      </div>
+      <div class="step">
+        <h3>Step 3: Bet Confidently</h3>
+        <p>Use our calculators and alerts to maximize your profits.</p>
+      </div>
     </div>
   </div>
-</div>
+
+  <div class="section pricing-summary">
+    <h2>Find the Right Plan for You</h2>
+    <p>Explore our plans to discover the perfect fit for your betting needs.</p>
+    <button class="cta-primary" routerLink="/pricing">View Pricing</button>
+  </div>
+
+
+  <!-- Testimonials Section -->
+  <!-- <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial">
+      <p>"BettorOdds helped me make over $1,000 in just a few weeks!"</p>
+      <span>- Sarah, Verified User</span>
+    </div>
+    <div class="testimonial">
+      <p>"The best tool for finding arbitrage opportunities. Highly recommend!"</p>
+      <span>- Mike, Pro Bettor</span>
+    </div>
+  </section> -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 BettorOdds. All rights reserved.</p>
+    <nav class="footer-links">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a> |
+      <a href="#">Contact Us</a>
+    </nav>
+  </footer>
+</body>
+
+</html>

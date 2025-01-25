@@ -11,7 +11,7 @@ import { LoggerModule } from 'ngx-logger';
 import { environment } from '../environments/environment';
 import { ProgramListComponent } from './program-list/program-list.component';
 import { RulesComponent } from './rules/rules.component';
-import { LayoutComponent } from './shared/layout/layout.component';  // Import the LayoutComponent
+import { LayoutComponent } from './shared/layout/layout.component';
 
 
 // Import Angular Material modules
@@ -30,7 +30,7 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventHeaderComponent } from './event-header/event-header.component';
 import { FiltersComponent } from './filters/filters.component';
 import { OddsTableComponent } from './odds-table/odds-table.component';
-import { ArbitrageComponent } from './arbitrage/arbitrage.component'; // For ngModel
+import { ArbitrageComponent } from './arbitrage/arbitrage.component';
 
 @NgModule({
   declarations: [

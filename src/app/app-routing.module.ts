@@ -8,6 +8,7 @@ import { RulesComponent } from './rules/rules.component';
 import { OddsComponent } from './odds/odds.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { ArbitrageComponent } from './arbitrage/arbitrage.component';
+import { GetStartedComponent } from './pages/get-started/get-started.component';
 
 
 
@@ -73,6 +74,14 @@ const appRoutes: Routes = [
   {
     path: 'event/:id',
     component: EventDetailComponent
+  },
+  {
+    path: 'get-started',
+    component: GetStartedComponent
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule),
   },
   {
     path: '**',

@@ -9,11 +9,24 @@ import { ArbitrageService } from '../core/services/arbitrage.service';
 })
 export class ArbitrageComponent implements OnInit {
   arbitrageBets: ArbitrageBet[] = [];
+  filteredBets: ArbitrageBet[] = [];
+  searchQuery: string = '';
 
   constructor(private arbitrageService: ArbitrageService) { }
 
   ngOnInit(): void {
     this.arbitrageBets = this.arbitrageService.getMockArbitrageBets();
+    this.filteredBets = [...this.arbitrageBets]; // Initially show all bets
+  }
+
+  onSearch(): void {
+    const query = this.searchQuery.toLowerCase();
+    this.filteredBets = this.arbitrageBets.filter(
+      (bet) =>
+        bet.event.toLowerCase().includes(query) ||
+        bet.market.toLowerCase().includes(query) ||
+        bet.books.some((book) => book.name.toLowerCase().includes(query))
+    );
   }
 
   calculateProfits(bet: ArbitrageBet, changedIndex: number): void {
@@ -31,7 +44,6 @@ export class ArbitrageComponent implements OnInit {
     const odds1 = oddsToDecimal(bet.books[0].odds);
     const odds2 = oddsToDecimal(bet.books[1].odds);
 
-    // If the first bet size is updated, calculate the second bet size
     if (changedIndex === 0) {
       const betSize1 = bet.books[0].betSize || 0;
       bet.books[1].betSize = parseFloat((betSize1 * odds1 / odds2).toFixed(2));
@@ -40,7 +52,6 @@ export class ArbitrageComponent implements OnInit {
       bet.books[0].betSize = parseFloat((betSize2 * odds2 / odds1).toFixed(2));
     }
 
-    // Calculate profits for both outcomes
     const betSize1 = bet.books[0].betSize || 0;
     const betSize2 = bet.books[1].betSize || 0;
 

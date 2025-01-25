@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './core/guards/auth.guard';
 
-import { ProgramListComponent } from './program-list/program-list.component';
-import { RulesComponent } from './rules/rules.component';
-import { OddsComponent } from './odds/odds.component';
-import { EventDetailComponent } from './event-detail/event-detail.component';
-import { ArbitrageComponent } from './arbitrage/arbitrage.component';
+import { ProgramListComponent } from './features/program-list/program-list.component';
+import { RulesComponent } from './features/rules/rules.component';
+import { OddsComponent } from './features/odds/odds.component';
+import { EventDetailComponent } from './features/event-detail/event-detail.component';
+import { ArbitrageComponent } from './features/arbitrage/arbitrage.component';
 import { GetStartedComponent } from './pages/get-started/get-started.component';
 
 

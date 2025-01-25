@@ -9,8 +9,8 @@ import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { LoggerModule } from 'ngx-logger';
 import { environment } from '../environments/environment';
-import { ProgramListComponent } from './program-list/program-list.component';
-import { RulesComponent } from './rules/rules.component';
+import { ProgramListComponent } from './features/program-list/program-list.component';
+import { RulesComponent } from './features/rules/rules.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 
 
@@ -24,13 +24,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';  // Added for the header
 import { MatSidenavModule } from '@angular/material/sidenav';  // Added for the sidebar
 import { FormsModule } from '@angular/forms';
-import { OddsComponent } from './odds/odds.component';
-import { EventComponent } from './event/event.component';
-import { EventDetailComponent } from './event-detail/event-detail.component';
+import { OddsComponent } from './features/odds/odds.component';
+import { EventComponent } from './features/event/event.component';
+import { EventDetailComponent } from './features/event-detail/event-detail.component';
 import { EventHeaderComponent } from './event-header/event-header.component';
-import { FiltersComponent } from './filters/filters.component';
+import { FiltersComponent } from './features/filters/filters.component';
 import { OddsTableComponent } from './odds-table/odds-table.component';
-import { ArbitrageComponent } from './arbitrage/arbitrage.component';
+import { ArbitrageComponent } from './features/arbitrage/arbitrage.component';
 
 @NgModule({
   declarations: [

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ArbitrageBet } from '../../arbitrage/arbitrage-bet.model';
+import { ArbitrageBet } from '../../features/arbitrage/arbitrage-bet.model';
 
 @Injectable({
   providedIn: 'root',

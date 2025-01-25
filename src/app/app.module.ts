@@ -27,9 +27,9 @@ import { FormsModule } from '@angular/forms';
 import { OddsComponent } from './features/odds/odds.component';
 import { EventComponent } from './features/event/event.component';
 import { EventDetailComponent } from './features/event-detail/event-detail.component';
-import { EventHeaderComponent } from './event-header/event-header.component';
+import { EventHeaderComponent } from './features/event-header/event-header.component';
 import { FiltersComponent } from './features/filters/filters.component';
-import { OddsTableComponent } from './odds-table/odds-table.component';
+import { OddsTableComponent } from './features/odds-table/odds-table.component';
 import { ArbitrageComponent } from './features/arbitrage/arbitrage.component';
 
 @NgModule({

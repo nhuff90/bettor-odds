@@ -11,17 +11,28 @@ import { throwIfAlreadyLoaded } from './guards/module-import.guard';
 import { GlobalErrorHandler } from './services/globar-error.handler';
 import { AdminGuard } from './guards/admin.guard';
 
+// Add your services to the providers array
+import { ArbitrageService } from './services/arbitrage.service';
+import { MockOddsService } from './services/mock-odds.service';
+import { NotificationService } from './services/notification.service';
+import { OddsService } from './services/odds.service';
+import { SpinnerService } from './services/spinner.service';
+
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule
   ],
-  declarations: [
-  ],
+  declarations: [],
   providers: [
     AuthGuard,
     AdminGuard,
     MediaMatcher,
+    ArbitrageService,
+    MockOddsService,
+    NotificationService,
+    OddsService,
+    SpinnerService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: SpinnerInterceptor,
@@ -40,6 +51,7 @@ import { AdminGuard } from './guards/admin.guard';
     { provide: 'LOCALSTORAGE', useValue: window.localStorage }
   ],
   exports: [
+
   ]
 })
 export class CoreModule {

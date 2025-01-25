@@ -9,6 +9,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
 import { ContentPlaceholderAnimationComponent } from './content-placeholder-animation/content-placeholder-animation.component';
 import { LocalDatePipe } from './pipes/local-date.pipe';
 import { YesNoPipe } from './pipes/yes-no.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import { YesNoPipe } from './pipes/yes-no.pipe';
         ContentPlaceholderAnimationComponent,
         LimitToPipe,
         LocalDatePipe,
-        YesNoPipe
+        YesNoPipe,
+        FooterComponent
     ],
     exports: [
         FormsModule,
@@ -34,7 +36,8 @@ import { YesNoPipe } from './pipes/yes-no.pipe';
         ConfirmDialogComponent,
         ContentPlaceholderAnimationComponent,
         LocalDatePipe,
-        YesNoPipe
+        YesNoPipe,
+        FooterComponent
     ]
 })
 export class SharedModule { }

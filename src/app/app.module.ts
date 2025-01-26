@@ -21,8 +21,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-import { MatToolbarModule } from '@angular/material/toolbar';  // Added for the header
-import { MatSidenavModule } from '@angular/material/sidenav';  // Added for the sidebar
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { OddsComponent } from './features/odds/components/odds.component';
 import { EventComponent } from './features/event/components/event.component';
@@ -67,9 +68,10 @@ import { ViewPlansComponent } from './features/view-plans/components/view-plans.
     MatFormFieldModule,
     MatInputModule,
     MatListModule,
-    MatToolbarModule,  // For the top navbar
-    MatSidenavModule,  // For the sidebar
-    FormsModule // For two-way data binding (ngModel)
+    MatToolbarModule,
+    MatSidenavModule,
+    MatMenuModule,
+    FormsModule
   ],
   bootstrap: [AppComponent]
 })

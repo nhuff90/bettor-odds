@@ -1,0 +1,83 @@
+.pricing {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #121212;
+}
+
+.pricing h1 {
+    font-size: 2.5rem;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.pricing p {
+    font-size: 1.2rem;
+    color: #bb86fc;
+    margin-bottom: 20px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1 1 300px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.pricing-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.pricing-card .price {
+    font-size: 1.8rem;
+    color: #4caf50;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pricing-card .features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.pricing-card .features li {
+    color: #bb86fc;
+    margin-bottom: 10px;
+}
+
+.popular {
+    border: 2px solid #4caf50;
+}
+
+.cta-primary {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-primary:hover {
+    background-color: #43a047;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,15 @@
+<div class="pricing">
+    <h1>Choose Your Plan</h1>
+    <p>Select a plan that fits your needs and start finding betting opportunities today!</p>
+
+    <div class="pricing-cards">
+        <div class="pricing-card" *ngFor="let plan of plans" [ngClass]="{ 'popular': plan.popular }">
+            <h3>{{ plan.name }}</h3>
+            <p class="price">${{ plan.price }}/month</p>
+            <ul class="features">
+                <li *ngFor="let feature of plan.features">{{ feature }}</li>
+            </ul>
+            <button class="cta-primary">Choose {{ plan.name }}</button>
+        </div>
+    </div>
+</div>

@@ -24,40 +24,61 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #4caf50, #1976d2);
+  background: linear-gradient(to right, #2e7d32, #1565c0);
+  /* Darker, more subdued gradient */
   color: white;
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
+  border-bottom: 3px solid #1b5e20;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero .cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
 }
 
 .hero .cta-buttons button {
-  margin: 5px;
-  padding: 10px 20px;
+  margin: 0;
+  padding: 12px 25px;
   border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
   cursor: pointer;
-}
-
-.cta-primary {
-  background-color: #4caf50;
+  background-color: #388e3c;
   color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cta-secondary {
+.hero .cta-buttons button:hover {
+  background-color: #2e7d32;
+  transform: translateY(-3px);
+}
+
+.hero .cta-buttons .cta-secondary {
   background-color: #ffffff;
-  color: #4caf50;
-  border: 2px solid #4caf50;
+  color: #388e3c;
+  border: 2px solid #388e3c;
+}
+
+.hero .cta-buttons .cta-secondary:hover {
+  background-color: #e8f5e9;
 }
 
 /* Live Feed Section */
@@ -165,6 +186,12 @@ body {
   border-radius: 8px;
   flex: 1;
   max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .pricing-card h3 {
@@ -229,21 +256,4 @@ body {
 
 .pricing-summary .cta-primary:hover {
   background-color: #43a047;
-}
-
-/* Footer */
-.footer {
-  background-color: #1e1e1e;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer-links a {
-  color: #bb86fc;
-  margin: 0 5px;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
 }

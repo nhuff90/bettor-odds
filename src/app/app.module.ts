@@ -31,6 +31,7 @@ import { EventHeaderComponent } from './features/event-header/components/event-h
 import { FiltersComponent } from './features/filters/components/filters.component';
 import { OddsTableComponent } from './features/odds-table/components/odds-table.component';
 import { ArbitrageComponent } from './features/arbitrage/components/arbitrage.component';
+import { ViewPlansComponent } from './features/view-plans/components/view-plans.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ArbitrageComponent } from './features/arbitrage/components/arbitrage.co
     EventHeaderComponent,
     FiltersComponent,
     OddsTableComponent,
-    ArbitrageComponent
+    ArbitrageComponent,
+    ViewPlansComponent
   ],
   imports: [
     BrowserModule,

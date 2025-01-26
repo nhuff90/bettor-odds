@@ -9,6 +9,7 @@ import { OddsComponent } from './features/odds/components/odds.component';
 import { EventDetailComponent } from './features/event-detail/components/event-detail.component';
 import { ArbitrageComponent } from './features/arbitrage/components/arbitrage.component';
 import { GetStartedComponent } from './pages/get-started/component/get-started.component';
+import { ViewPlansComponent } from './features/view-plans/components/view-plans.component';
 
 const appRoutes: Routes = [
   {
@@ -81,6 +82,11 @@ const appRoutes: Routes = [
   {
     path: 'get-started',
     component: GetStartedComponent
+  },
+  {
+    path: 'view-plans',
+    component: ViewPlansComponent,
+    canActivate: [AuthGuard], // Optional: Protect with AuthGuard
   },
   {
     path: 'not-found',

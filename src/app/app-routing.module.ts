@@ -3,16 +3,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './core/guards/auth.guard';
 
-import { ProgramListComponent } from './features/program-list/program-list.component';
-import { RulesComponent } from './features/rules/rules.component';
-import { OddsComponent } from './features/odds/odds.component';
-import { EventDetailComponent } from './features/event-detail/event-detail.component';
-import { ArbitrageComponent } from './features/arbitrage/arbitrage.component';
-import { GetStartedComponent } from './pages/get-started/get-started.component';
-
-
+import { ProgramListComponent } from './features/program-list/components/program-list.component';
+import { RulesComponent } from './features/rules/components/rules.component';
+import { OddsComponent } from './features/odds/components/odds.component';
+import { EventDetailComponent } from './features/event-detail/components/event-detail.component';
+import { ArbitrageComponent } from './features/arbitrage/components/arbitrage.component';
+import { GetStartedComponent } from './pages/get-started/component/get-started.component';
 
 const appRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: 'dashboard', // Redirect to the dashboard
+    pathMatch: 'full'
+  },
   {
     path: 'auth',
     loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule),
@@ -68,8 +71,8 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'odds',  // URL path
-    component: OddsComponent  // Component to load
+    path: 'odds',
+    component: OddsComponent
   },
   {
     path: 'event/:id',
@@ -80,12 +83,16 @@ const appRoutes: Routes = [
     component: GetStartedComponent
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule),
+    path: 'not-found',
+    loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule),
+  },
+  {
+    path: 'legal',
+    loadChildren: () => import('./pages/legal/legal.module').then(m => m.LegalModule),
   },
   {
     path: '**',
-    redirectTo: 'dashboard',
+    redirectTo: 'not-found',
     pathMatch: 'full'
   }
 ];

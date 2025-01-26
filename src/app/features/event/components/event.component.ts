@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { OddsEvent } from '../../core/services/odds.interface';  // Import OddsEvent for type-checking
+import { OddsEvent } from '../../odds/odds.interface';  // Import OddsEvent for type-checking
 
 @Component({
   selector: 'app-event',

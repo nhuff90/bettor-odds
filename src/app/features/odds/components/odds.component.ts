@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MockOddsService } from '../../core/services/mock-odds.service'; // Adjust import
-import { OddsData } from '../../core/services/odds.interface'; // Adjust import
+import { MockOddsService } from '../services/mock-odds.service'; // Adjust import
+import { OddsData } from '../odds.interface'; // Adjust import
 
 @Component({
   selector: 'app-odds',

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { OddsData } from './odds.interface'; // Adjust import to your interface location
+import { OddsData } from '../odds.interface'; // Adjust import to your interface location
 
 @Injectable({
   providedIn: 'root',

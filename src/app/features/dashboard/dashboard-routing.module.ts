@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
-import { GetStartedComponent } from '../../pages/get-started/get-started.component';
+import { DashboardHomeComponent } from './dashboard-home/components/dashboard-home.component';
+import { GetStartedComponent } from '../../pages/get-started/component/get-started.component';
 
 const routes: Routes = [
   { path: '', component: DashboardHomeComponent }, // Default route

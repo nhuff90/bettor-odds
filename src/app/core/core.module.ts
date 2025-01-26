@@ -12,10 +12,10 @@ import { GlobalErrorHandler } from './services/globar-error.handler';
 import { AdminGuard } from './guards/admin.guard';
 
 // Add your services to the providers array
-import { ArbitrageService } from './services/arbitrage.service';
-import { MockOddsService } from './services/mock-odds.service';
+import { ArbitrageService } from '../features/arbitrage/services/arbitrage.service';
+import { MockOddsService } from '../features/odds/services/mock-odds.service';
 import { NotificationService } from './services/notification.service';
-import { OddsService } from './services/odds.service';
+import { OddsService } from '../features/odds/services/odds.service';
 import { SpinnerService } from './services/spinner.service';
 
 @NgModule({

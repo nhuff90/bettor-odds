@@ -9,8 +9,8 @@ import { CustomMaterialModule } from './custom-material/custom-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { LoggerModule } from 'ngx-logger';
 import { environment } from '../environments/environment';
-import { ProgramListComponent } from './features/program-list/program-list.component';
-import { RulesComponent } from './features/rules/rules.component';
+import { ProgramListComponent } from './features/program-list/components/program-list.component';
+import { RulesComponent } from './features/rules/components/rules.component';
 import { LayoutComponent } from './shared/layout/layout.component';
 
 
@@ -24,13 +24,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';  // Added for the header
 import { MatSidenavModule } from '@angular/material/sidenav';  // Added for the sidebar
 import { FormsModule } from '@angular/forms';
-import { OddsComponent } from './features/odds/odds.component';
-import { EventComponent } from './features/event/event.component';
-import { EventDetailComponent } from './features/event-detail/event-detail.component';
-import { EventHeaderComponent } from './features/event-header/event-header.component';
-import { FiltersComponent } from './features/filters/filters.component';
-import { OddsTableComponent } from './features/odds-table/odds-table.component';
-import { ArbitrageComponent } from './features/arbitrage/arbitrage.component';
+import { OddsComponent } from './features/odds/components/odds.component';
+import { EventComponent } from './features/event/components/event.component';
+import { EventDetailComponent } from './features/event-detail/components/event-detail.component';
+import { EventHeaderComponent } from './features/event-header/components/event-header.component';
+import { FiltersComponent } from './features/filters/components/filters.component';
+import { OddsTableComponent } from './features/odds-table/components/odds-table.component';
+import { ArbitrageComponent } from './features/arbitrage/components/arbitrage.component';
 
 @NgModule({
   declarations: [

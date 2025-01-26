@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ArbitrageBet } from './arbitrage-bet.model';
-import { ArbitrageService } from '../../core/services/arbitrage.service';
+import { ArbitrageBet } from '../arbitrage-bet.model';
+import { ArbitrageService } from '../services/arbitrage.service';
 
 @Component({
   selector: 'app-arbitrage',

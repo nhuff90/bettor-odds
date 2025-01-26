@@ -1,0 +1,41 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    /* Match the global dark mode background */
+    color: #e0e0e0;
+    /* Match global text color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    /* Subtle shadow for contrast */
+}
+
+h1,
+h2 {
+    color: #bb86fc;
+    /* Accent color for headings */
+}
+
+p,
+li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #1e90ff;
+    /* Match global link color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #bb86fc;
+    /* Accent color on hover */
+}
